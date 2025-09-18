@@ -1,0 +1,35 @@
+<!-- refactorai-icon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-labelledby="title desc" role="img">
+  <title id="title">RefactorAI Logo</title>
+  <desc id="desc">Stylized R inside circular refactor arrows — for RefactorAI</desc>
+
+  <!-- Background circle (optional subtle ring) -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="var(--refactor-ring, rgba(0,0,0,0.06))" stroke-width="2"/>
+
+  <!-- Circular refactor arrows -->
+  <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Arrow (clockwise, top-right) -->
+    <path d="M45 18c-3.6-3.6-8.6-5.8-13.8-5.8-10.6 0-19.2 8.6-19.2 19.2 0 5.2 2.1 10.2 5.7 13.8" />
+    <path d="M45 18 L41 14 L45 10" transform="translate(-1 0)"/> <!-- small arrowhead (visual) -->
+
+    <!-- Arrow (counter part, bottom-left) -->
+    <path d="M19 46c3.6 3.6 8.6 5.8 13.8 5.8 10.6 0 19.2-8.6 19.2-19.2 0-5.2-2.1-10.2-5.7-13.8" />
+    <path d="M19 46 L23 50 L19 54" transform="translate(1 0)"/>
+  </g>
+
+  <!-- Stylized "R" (solid accent) -->
+  <g transform="translate(8,6)">
+    <path d="M20 10
+             c5 0 8 3 8 7 0 3.2-2.7 5.3-6 6.1l4 6.9h-4.8l-3.6-6.4h-3.6v6.4h-4v-22h9.0z
+             M20 14c-1.7 0-3.2 0.9-3.2 2.8 0 1.9 1.5 2.9 3.2 2.9 1.8 0 3.2-1.0 3.2-2.9 0-1.9-1.4-2.8-3.2-2.8z"
+          fill="var(--refactor-accent, #7C4DFF)"/>
+  </g>
+
+  <!-- subtle inner stroke to lift the R on dark backgrounds -->
+  <g transform="translate(8,6)">
+    <path d="M20 10
+             c5 0 8 3 8 7 0 3.2-2.7 5.3-6 6.1l4 6.9h-4.8l-3.6-6.4h-3.6v6.4h-4v-22h9.0z
+             M20 14c-1.7 0-3.2 0.9-3.2 2.8 0 1.9 1.5 2.9 3.2 2.9 1.8 0 3.2-1.0 3.2-2.9 0-1.9-1.4-2.8-3.2-2.8z"
+          fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+  </g>
+</svg>
