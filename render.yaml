@@ -1,0 +1,26 @@
+services:
+  # Backend API Service
+  - type: web
+    name: refactorai-backend
+    runtime: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GOOGLE_API_KEY
+        sync: false # This will need to be set in Render dashboard
+    healthCheckPath: /
+
+  # Frontend Static Site
+  - type: web
+    name: refactorai-frontend
+    runtime: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: refactorai-backend
+          property: host
