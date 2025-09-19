@@ -23,15 +23,21 @@ function App() {
     setLoading(true);
     setReview(""); // clear old review while loading
     try {
-      // Use relative URL since frontend and backend are served from same origin
+      // Use environment variable or fallback to localhost for development
       const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
-      const response = await axios.post(`${API_BASE_URL}/ai/get-review`, {
+      console.log('API_BASE_URL:', API_BASE_URL); // Debug log
+      const fullUrl = `${API_BASE_URL}/ai/get-review`;
+      console.log('Making request to:', fullUrl); // Debug log
+      
+      const response = await axios.post(fullUrl, {
         code,
       });
       setReview(response.data);
       // eslint-disable-next-line no-unused-vars
     } catch (error) {
-      setReview("❌ Failed to fetch review. Please try again.");
+      console.error('API Error:', error); // Debug log
+      console.error('Error details:', error.response?.data); // Debug log
+      setReview(`❌ Failed to fetch review. Error: ${error.message}`);
     } finally {
       setLoading(false);
     }
