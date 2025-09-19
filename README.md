@@ -17,6 +17,10 @@ RefactorAI helps developers improve their code quality by providing intelligent 
 - 🔄 **Hot Reload Development** - Real-time server restart with nodemon for efficient development
 - ☁️ **Cloud Ready** - Deploy easily to Render, Vercel, or any cloud platform
 
+## 📸 Screenshots
+
+![https://github.com/hellman53/RefactorAI/blob/439a223a710b20b4fac4211c8965c4e0366fa457/frontend/public/preview.png](https://github.com/hellman53/RefactorAI/blob/439a223a710b20b4fac4211c8965c4e0366fa457/frontend/public/preview.png)
+
 ## 🏗️ Architecture
 
 ```
