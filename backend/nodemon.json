@@ -1,0 +1,20 @@
+{
+  "watch": [
+    "src",
+    "server.js",
+    "../frontend/src"
+  ],
+  "ext": "js,json,jsx,css",
+  "ignore": [
+    "node_modules",
+    "dist",
+    "build",
+    "../frontend/node_modules",
+    "../frontend/dist"
+  ],
+  "delay": 1000,
+  "verbose": true,
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

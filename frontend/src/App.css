@@ -30,17 +30,48 @@ main .right {
 main .left {
   background-color: black;
   position: relative;
+  display: flex;
+  flex-direction: column; /* stack code + button */
 }
 
 .left .code {
-  height: 100%;
-  width: 100%;
+  overflow: auto;         
+  border-radius: 8px;
+  background: #1e1e1e;     
+  border: none !important;
 }
+
+/* For Chrome, Edge, Safari */
+.left .code::-webkit-scrollbar {
+  width: 8px;              /* slim scrollbar */
+  height: 8px;             /* slim for horizontal */
+}
+
+.left .code::-webkit-scrollbar-track {
+  background: transparent; /* no background */
+}
+
+.left .code::-webkit-scrollbar-thumb {
+  background: #555;        /* scrollbar color */
+  border-radius: 10px;     /* rounded edges */
+  transition: background 0.2s;
+}
+
+.left .code::-webkit-scrollbar-thumb:hover {
+  background: #888;        /* lighter on hover */
+}
+
+/* For Firefox */
+.left .code {
+  scrollbar-width: thin;           /* slim scrollbar */
+  scrollbar-color: #555 transparent; /* thumb + track */
+}
+
 
 main .review {
   position: absolute;
   bottom: 1rem;
-  right: 1rem;
+  right: 1.5rem;
   border-radius: 8px;
   background-color: #dcbdfb;
   color: black;
@@ -71,6 +102,7 @@ main .review:disabled {
   background-color: #242424;
   min-height: 100%;
   width: 100%;
+  
 }
 
 .loader {
@@ -89,6 +121,7 @@ main .review:disabled {
   main .right {
     flex-basis: 100%;
     height: 50%; /* half height each */
+    
   }
 
   .left .code {

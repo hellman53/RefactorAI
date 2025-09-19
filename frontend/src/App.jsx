@@ -29,7 +29,7 @@ function App() {
         code,
       });
       setReview(response.data);
-    // eslint-disable-next-line no-unused-vars
+      // eslint-disable-next-line no-unused-vars
     } catch (error) {
       setReview("❌ Failed to fetch review. Please try again.");
     } finally {
@@ -48,27 +48,31 @@ function App() {
               highlight={(code) =>
                 prism.highlight(code, prism.languages.javascript, "javascript")
               }
-              padding={10}
+              padding={15}
               style={{
                 fontFamily: '"Fira code", "Fira Mono", monospace',
                 fontSize: 16,
-                border: "1px solid black",
-                borderRadius: "8px",
-                height: "100%",
+                // border: "1px solid #333",
+                borderRadius: "12px",
                 width: "100%",
+                minHeight: "100%",
+                backgroundColor: "black",
+                color: "#ffffff",
+                overflow: "auto",
+                resize: "vertical"
               }}
+              textareaId="code-editor"
+              className="code-editor"
             />
           </div>
-          <button
-            onClick={reviewCode}
-            className="review"
-            disabled={loading}
-          >
+          <button onClick={reviewCode} className="review" disabled={loading}>
             {loading ? "Reviewing..." : "Review"}
           </button>
         </div>
+
+
         <div className="right">
-          <div className="markdown-body" >
+          <div className="markdown-body">
             {loading ? (
               <div className="loader">⏳ Fetching AI review...</div>
             ) : (

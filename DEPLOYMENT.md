@@ -86,20 +86,27 @@ cd backend && npm start
 
 ## Local Development
 
-### Option 1: Full-stack development (Recommended)
+### Option 1: Full-stack development with hot reload (Recommended)
 ```bash
-# Build frontend and start backend
+# Build frontend and start backend with nodemon
 node build.js
-cd backend && npm start
+cd backend && npm run dev
 ```
 
-### Option 2: Separate development
+### Option 2: Separate development with hot reload
 ```bash
-# Terminal 1: Start backend
+# Terminal 1: Start backend with nodemon (auto-restart on changes)
 cd backend && npm run dev
 
-# Terminal 2: Start frontend
+# Terminal 2: Start frontend with Vite dev server (hot reload)
 cd frontend && npm run dev
+```
+
+### Option 3: Production-like build
+```bash
+# Build frontend and start backend (no hot reload)
+node build.js
+cd backend && npm start
 ```
 
 For local development environment variables:

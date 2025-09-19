@@ -4,9 +4,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "dev": "nodemon server.js",
+    "dev:watch": "nodemon --watch src --watch ../frontend/src server.js",
     "build": "cd ../frontend && npm install --include=dev && npm run build",
     "build:start": "npm run build && npm start",
-    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,5 +19,8 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
