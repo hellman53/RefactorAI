@@ -39,6 +39,7 @@ main .left {
   border-radius: 8px;
   background: #1e1e1e;     
   border: none !important;
+  min-height: 100%;
 }
 
 /* For Chrome, Edge, Safari */
