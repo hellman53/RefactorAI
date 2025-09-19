@@ -23,7 +23,8 @@ function App() {
     setLoading(true);
     setReview(""); // clear old review while loading
     try {
-      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+      // Use relative URL since frontend and backend are served from same origin
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
       const response = await axios.post(`${API_BASE_URL}/ai/get-review`, {
         code,
       });

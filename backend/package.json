@@ -4,6 +4,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build": "cd ../frontend && npm install && npm run build",
+    "build:start": "npm run build && npm start",
+    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +17,6 @@
     "@google/genai": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
-    "express": "^5.1.0"
+    "express": "^4.19.2"
   }
 }
