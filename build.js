@@ -22,7 +22,7 @@ try {
 
     // Install frontend dependencies and build
     console.log('📦 Installing frontend dependencies...');
-    execSync('npm install', { cwd: frontendDir, stdio: 'inherit' });
+    execSync('npm install --include=dev', { cwd: frontendDir, stdio: 'inherit' });
     
     console.log('🏗️ Building frontend...');
     execSync('npm run build', { cwd: frontendDir, stdio: 'inherit' });

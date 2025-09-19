@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "cd ../frontend && npm install && npm run build",
+    "build": "cd ../frontend && npm install --include=dev && npm run build",
     "build:start": "npm run build && npm start",
     "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"

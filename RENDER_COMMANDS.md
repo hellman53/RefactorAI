@@ -7,6 +7,8 @@
 cd backend && npm install && npm run build
 ```
 
+**Important:** The build script automatically installs frontend dev dependencies with `--include=dev` flag to ensure `vite` is available.
+
 ### Start Command:
 ```bash
 cd backend && npm start

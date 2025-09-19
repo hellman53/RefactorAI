@@ -139,6 +139,7 @@ VITE_API_BASE_URL=http://localhost:3000
    - Check build logs in Render dashboard
    - Ensure both `backend/package.json` and `frontend/package.json` exist
    - Verify build command can access frontend directory
+   - **"vite: not found" error**: The build script installs dev dependencies with `--include=dev` flag
 
 2. **Frontend Not Loading**: 
    - Check if `frontend/dist` directory exists after build
