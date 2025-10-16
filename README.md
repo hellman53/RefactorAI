@@ -361,10 +361,6 @@ DEBUG=* npm run dev
 cd backend && nodemon --verbose server.js
 ```
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Google AI** for providing the Gemini AI API
@@ -372,14 +368,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Vite Team** for the fast build tool
 - **Render** for easy deployment platform
 - **Open Source Community** for the awesome libraries
-
-## 📞 Support
-
-- 📚 **Documentation**: Check [DEVELOPMENT.md](DEVELOPMENT.md) and [DEPLOYMENT.md](DEPLOYMENT.md)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/RefactorAI/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/RefactorAI/discussions)
-- 📧 **Contact**: your.email@example.com
-
 ---
 
 <div align="center">
